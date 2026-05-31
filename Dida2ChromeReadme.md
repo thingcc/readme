@@ -1,3 +1,8 @@
+---
+layout: default
+title: 滴答清单收集助手
+---
+
 # 🚀 滴答清单 Web 收集助手 (TickTick Web Clipper)
 
 **一款为滴答清单量身定制的 Chrome 浏览器 GTD 收集神器，一键将网页化为待办！**
