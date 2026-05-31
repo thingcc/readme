@@ -16,7 +16,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.8;          /* 舒适的阅读行距 */
+            line-height: 1.8;
             padding: 20px;
             max-width: 1000px;
             margin: 0 auto;
@@ -24,8 +24,11 @@
             color: #1f2d3d;
         }
 
-        /* 顶部导航栏 */
+        /* 顶部导航栏 - 悬浮固定 */
         nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
             background: #f8f9fa;
             border-radius: 12px;
             padding: 12px 20px;
@@ -34,7 +37,7 @@
             gap: 16px;
             flex-wrap: wrap;
             border-bottom: 2px solid #e9ecef;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* 增强阴影，突出悬浮效果 */
         }
 
         nav a {
@@ -68,12 +71,13 @@
             margin-bottom: 1.25em;
         }
 
-        /* 标题间距 */
+        /* 标题间距 + 滚动偏移（避免被固定导航栏遮挡） */
         .content h1, .content h2, .content h3, .content h4 {
             margin-top: 1.6em;
             margin-bottom: 0.6em;
             font-weight: 600;
             line-height: 1.35;
+            scroll-margin-top: 80px;  /* 锚点跳转时预留导航栏高度 */
         }
 
         .content h1 {
@@ -162,10 +166,15 @@
             nav {
                 justify-content: center;
                 gap: 8px;
+                padding: 10px 12px;
             }
             nav a {
                 padding: 6px 12px;
                 font-size: 0.85rem;
+            }
+            /* 移动端减小滚动偏移量 */
+            .content h1, .content h2, .content h3, .content h4 {
+                scroll-margin-top: 70px;
             }
         }
     </style>
