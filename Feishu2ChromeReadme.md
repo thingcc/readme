@@ -1,3 +1,8 @@
+---
+layout: default
+title: 飞书OKR看板增强
+---
+
 # 🚀 飞书 OKR 看板增强 (Feishu OKR Mate)
 
 **一款专为飞书 OKR 打造的 Chrome 浏览器增强插件，旨在优化界面排版，提供更加沉浸和高效的目标管理体验。**
