@@ -40,7 +40,7 @@
 
 ## 🛠 安装指南 (Installation)
 
-1. **前往 Chrome 网上应用店**：[🔗 点击此处安装]([#](https://chromewebstore.google.com/detail/%E4%B8%80%E9%94%AE%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/mccfdfnlafphbbihpmlgagjecaabhbbi))
+1. **前往 Chrome 网上应用店**：[🔗 点击此处安装](https://chromewebstore.google.com/detail/%E4%B8%80%E9%94%AE%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/mccfdfnlafphbbihpmlgagjecaabhbbi)
 2. 点击 **“添加至 Chrome” (Add to Chrome)**。
 3. 首次使用时，点击插件图标完成滴答清单的 OAuth 授权，即可开启沉浸式收集体验！
 
