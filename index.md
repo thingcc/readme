@@ -1,3 +1,4 @@
+<link rel="shortcut icon" href="https://readme.thing.cc/favicon.ico" type="image/x-icon">
 # 🚀 Thing.CC 产品说明
 
 欢迎来到我的产品文档中心！在这里，你可以找到我开发的所有 Chrome 扩展程序、移动端 App 及相关工具的详细说明与隐私政策。
