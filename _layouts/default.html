@@ -2,19 +2,172 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>{{ page.title }} | {{ site.title | default: "Thing.CC 产品文档" }}</title>
+    <!-- 全局 favicon -->
     <link rel="shortcut icon" href="https://readme.thing.cc/favicon.ico" type="image/x-icon">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 1000px; margin: 0 auto; }
-        nav { background: #f5f5f5; border-radius: 8px; padding: 12px 20px; margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap; border-bottom: 2px solid #e0e0e0; }
-        nav a { text-decoration: none; color: #0366d6; font-weight: 500; padding: 6px 12px; border-radius: 6px; transition: background 0.2s; }
-        nav a:hover { background: #e1e4e8; }
-        nav a.active { background: #0366d6; color: white; }
-        @media (max-width: 600px) { nav { justify-content: center; } }
-        .content { padding: 0 10px; }
-        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; font-size: 0.9em; color: #666; }
+        /* 基础重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;          /* 舒适的阅读行距 */
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            color: #1f2d3d;
+        }
+
+        /* 顶部导航栏 */
+        nav {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 12px 20px;
+            margin-bottom: 32px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e9ecef;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            background: #e9ecef;
+            color: #0366d6;
+        }
+
+        nav a.active {
+            background: #0366d6;
+            color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* 内容区域排版优化 */
+        .content {
+            word-wrap: break-word;
+        }
+
+        /* 段落间距 */
+        .content p {
+            margin-bottom: 1.25em;
+        }
+
+        /* 标题间距 */
+        .content h1, .content h2, .content h3, .content h4 {
+            margin-top: 1.6em;
+            margin-bottom: 0.6em;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            margin-top: 0.2em;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.2em;
+        }
+
+        /* 列表样式 */
+        .content ul, .content ol {
+            margin: 0.8em 0 1.2em 1.8em;
+        }
+
+        .content li {
+            margin-bottom: 0.4em;
+        }
+
+        /* 引用块 */
+        .content blockquote {
+            border-left: 4px solid #0366d6;
+            background: #f1f3f5;
+            padding: 0.8em 1.2em;
+            margin: 1.2em 0;
+            border-radius: 8px;
+            color: #2c3e50;
+        }
+
+        /* 表格 */
+        .content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1.2em 0;
+        }
+
+        .content th, .content td {
+            border: 1px solid #dee2e6;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        .content th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+
+        /* 代码块 */
+        .content pre {
+            background: #f6f8fa;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .content code {
+            background: #f0f2f4;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 0.9em;
+        }
+
+        /* 页脚 */
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 640px) {
+            body {
+                padding: 16px;
+            }
+            nav {
+                justify-content: center;
+                gap: 8px;
+            }
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -22,13 +175,15 @@
         <a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>🏠 首页</a>
         <a href="{{ site.baseurl }}/Feishu2ChromeReadme" {% if page.url contains "Feishu2ChromeReadme" %}class="active"{% endif %}>📊 飞书OKR增强</a>
         <a href="{{ site.baseurl }}/Dida2ChromeReadme" {% if page.url contains "Dida2ChromeReadme" %}class="active"{% endif %}>✅ 滴答清单助手</a>
-        <!-- 新增页面，直接在这里加一行即可 -->
+        <!-- 以后新增页面只需在这里增加一行 <a> 标签即可 -->
     </nav>
+
     <div class="content">
         {{ content }}
     </div>
+
     <footer>
-        © 2026 Thing.CC | All Rights Reserved
+        © 2026 Thing.CC | 高效·隐私·极简
     </footer>
 </body>
 </html>
