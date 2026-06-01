@@ -43,7 +43,7 @@ title: 飞书OKR看板增强
 
 ## 🛠 安装指南 (Installation)
 
-1. **前往 Chrome 网上应用店**：[🔗 点击此处安装（即将上线）](#)
+1. **前往 Chrome 网上应用店**：[🔗 点击此处安装](https://chromewebstore.google.com/detail/%E9%A3%9E%E4%B9%A6-okr-%E7%9C%8B%E6%9D%BF%E5%A2%9E%E5%BC%BA-feishu-okr-ma/acfbnmllkgcgbeblnpfjbkmggljndnkf?authuser=4&hl=zh-CN)
 2. 点击 **“添加至 Chrome” (Add to Chrome)**。
 3. 登录并打开您的飞书 OKR 页面，点击浏览器右上角的插件图标，即可开启增强体验！
 
